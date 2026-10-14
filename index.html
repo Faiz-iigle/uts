@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pemesanan Makanan</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<div class="kartu">
+  <h1>Pemesanan Makanan</h1>
+  <p class="abu">Menu tersedia:</p>
+  <ul>
+    <li>Nasi Goreng: Rp15.000</li>
+    <li>Mie Ayam: Rp12.000</li>
+  </ul>
+
+  <form id="formPesan" action="invoice.php" method="POST" novalidate>
+    <input type="hidden" name="token" id="token">
+    <fieldset>
+      <legend><a href="info.html">Info makanan</a></legend>
+      <label for="nama">Nama:</label>
+      <input type="text" id="nama" name="nama">
+      <div id="daftarBaris"></div>
+    </fieldset>
+    <div id="pesanError" class="error" style="display:none"></div>
+    <button type="submit" class="tombol">Pesan</button>
+  </form>
+</div>
+<script src="script.js"></script>
+</body></html>
